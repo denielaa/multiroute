@@ -1,89 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Multiroute Google Maps</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Custom Theme CSS -->
     <link href="css/styles.css" rel="stylesheet">
-	<link href="css/multiroute.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom" onLoad="multiRoute.initialize()">
-
+    <link href="css/multiroute.css" rel="stylesheet">
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-custom" onLoad="multiRoute.initialize()">
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand">
-					<span class="light">MULTIROUTE </span>GOOGLE MAPS
-                </a>
-            </div>
-
-            
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand">
+            <span class="light">MULTIROUTE </span>GOOGLE MAPS
+          </a>
         </div>
-        <!-- /.container -->
+      </div>
+      <!-- /.container -->
     </nav>
-
     <div class="container" id="wrapper">
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0">
-			
-				<!-- Form Start here -->
-				<form class="form-horizontal" role="form" onSubmit="return false;">
-				  <div class="form-group" id="waypoints">
-					<label for="from" class="col-sm-2 control-label">From</label>
-					<div class="col-sm-10">
-					  <input type="text" class="form-control" id="from" placeholder="Type an Address">
-					  <a id="from-link" href="#" onclick="multiRoute.getPosition()">Get my position</a> &nbsp;
-					  <a id="from-link" href="#" onclick="multiRoute.addWaypoints()">Add Waypoints</a>
-					</div>
-				  </div>
-				  <div class="form-group">
-					<label for="to" class="col-sm-2 control-label">To</label>
-					<div class="col-sm-10">
-					  <input type="text" class="form-control" id="to" placeholder="Type an Address">
-					</div>
-				  </div>
-				  <div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-					  <button type="submit" class="btn btn-info" onClick="multiRoute.showMultiRoute()">Submit</button>
-					  <button class="btn btn-danger" onClick="multiRoute.trafficActive()" title="Show/hide traffic layer"><i class="fa fa-road"></i></button>
-					  
-					</div>
-				  </div>
-				</form>
-                <!-- End Form -->
-				<div id="map"></div>
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0">
+          <!-- Form Start here -->
+          <form class="form-horizontal" role="form" onSubmit="return false;">
+            <div class="form-group" id="waypoints">
+              <label for="from" class="col-sm-2 control-label">From</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="from" placeholder="Type an Address">
+                <a id="from-link" href="#" onclick="multiRoute.getPosition()">Get my position</a> &nbsp;
+                <a id="from-link" href="#" onclick="multiRoute.addWaypoints()">Add Waypoints</a>
+              </div>
             </div>
+            <div class="form-group">
+              <label for="to" class="col-sm-2 control-label">To</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="to" placeholder="Type an Address">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-info" onClick="multiRoute.showMultiRoute()">Submit</button>
+                <button class="btn btn-danger" onClick="multiRoute.trafficActive()" title="Show/hide traffic layer"><i class="fa fa-road"></i></button>
+              </div>
+            </div>
+          </form>
+          <div class="test">
+            <p><span class="klop"></span></p>
+          </div>
+          <!-- End Form -->
+          <div id="map"></div>
         </div>
-		
-		<div class="row" class="routeWrap">
-			<div class="col-md-12">
-                <div id="route"></div>
-            </div>
-		</div>
+      </div>
+      <div class="row" class="routeWrap">
+        <div class="col-md-12">
+          <div id="route"></div>
+        </div>
+      </div>
     </div>
-    
     <!-- Core JavaScript Files -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-	<script src="js/gmaps.multiroute.min.js"></script>
-	
-	
-	
-</body>
-
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="js/gmaps.multiroute.min.js"></script>
+  </body>
 </html>
